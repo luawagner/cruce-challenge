@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('./partials/head', {style: 'home.css', title: 'Home'}) %>
+
+
+
+<body>
+    
+
+<header>
+    <div class="cabecera mobile">
+        <i class="fa-solid fa-bars"></i>
+        <img class="logo-cruce" src="/img/Vector(2).png" alt="">
+        <div class="cart"><img src="/img/Vector(7).png" alt=""> <p class="red text-titular">3</p></div>
+        
+    </div>
+    <div class="cabecera desktop">
+        <div class="bar-left">
+            <i class="fa-solid fa-bars"></i>
+        <p class="p">LOL</p>
+        <p class="p">CryBabies</p>
+        <p class="p">Funko</p>
+        <button class="hot-sale">
+            <img src="/img/hot-sale.svg" alt="">
+           </button>
+        
+        </div>
+        <div class="bar-right">
+            <form class="search-desk" action="/products/search" method="GET">
+                <input type="text" name="search" class="buscador-desk" placeholder="¿Qué estás buscando?">
+                  <button class="btn-search" type="submit">
+                    <img src="/img/Vector(8).png" alt="">
+                  </button> 
+                
+            </form>
+            <img src="/img/user.png" alt="">
+            <div class="cart"><img src="/img/Vector(7).png" alt=""> <p class="red text-titular">3</p></div>
+
+        </div>
+        
+    </div>
+   
+</header>
+    <div class="top-banner">
+        <p id="scroll-text" class="mobile">Mantené pulsado cualquier artículo para agregar al carrito.</p> <i class="fa-solid fa-xmark"></i>
+        <p id="scroll-text" class="desktop">Solo por hoy: envío gratis en todos los productos.</p> <i class="fa-solid fa-xmark"></i>
+
+    </div>
+    <form class="search" action="/products/search" method="GET">
+        <input type="text" name="search" class="buscador" placeholder="¿Qué estás buscando?">
+          <button type="submit">
+            <img src="/img/Vector(8).png" alt="">
+          </button> 
+        
+    </form>
+   
+
+        <main class="main-container">
+            <section class="pop-up"><img src="/img/popup.png" alt="">
+                <i class="fa-solid fa-xmark close"></i>
+            <h4>Aprovechá hasta 18 cuotas sin interés.</h4></section>
+    <section class="products-list">
+        <div class="titular">
+        <h1 class="text-titular">Llegó el invierno, encontralo antes que nadie</h1>
+        <p class="subtitulo">La colección más completa de Game of Thrones está en X</p>
+        <button class="button-orange desktop"><a href="/products"> Ver colección</a></button>
+        <div class="desktop products-right">
+            <div class="products-container">
+           <div class="row-left">
+            <%- include ('./partials/oneProduct') %>
+   </div>
+   <div class="row-right">
+    <%- include ('./partials/oneProduct') %>
+  
+</div>
+</div>
+       </div>
+         </div>
+
+         <div class="products-container">
+            <div class="row-left">
+
+                <%- include ('./partials/twoProducts') %>
+                
+    </div>
+    <div class="row-right">
+        <%- include ('./partials/twoProducts') %>
+        
+</div>
+    
+        </div>
+        <button class="button-orange mobile"><a href="/products"> Ver colección</a></button>
+
+           
+    </section>
+    <section class="Carousel nuestras marcas">
+       
+        <h2 class="text-titular purple">Nuestras marcas</h2>
+        
+        
+        <div class="slick-list" id="slick-list">
+          
+            <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)"><img src="/img/arrow.png" alt=""></button>
+                
+            <div class="slick-track" id="track"> 
+          <% const repeatMarcas = Array(3).fill(["/img/marvel.png","/img/disney.png","/img/logo_destacado_LOL.png","/img/logo_destacado_funko.png"]).flat() %> 
+        <% repeatMarcas.forEach(marca => { %>
+            <div class="slick">
+                <img src="<%= marca %>" alt=""> 
+            </div>
+            <% }) %>
+           
+        </div>
+
+        <button class="slick-arrow slick-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)"><img src="/img/arr-r.png"  alt=""></button>
+        
+        </div>
+    </section>
+<section class="beneficios  Carousel">
+    <div class="slick-list list-benef" id="slick-list">
+          
+        <button class="slick-arrow slick-prev arrow-benef" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)"><img src="/img/arrow.png" alt=""></button>
+            
+      
+        <div class="slick-track track-benef" id="track">
+        <div class="slick slick-benef">
+            <div class="beneficio">
+                <img src="/img/credit-card.png" alt="">
+                <div class="text">
+                    <h3 class="text-titular beneficio-title">12 y 18 Cuotas</h3>
+                    <p class="red beneficio-p inter-bold">¡Sin interés!</p>
+                </div>
+            </div>
+        </div>
+        <div class="slick slick-benef">
+            <div class="separador"></div>
+            <div class="beneficio">
+                <img src="/img/truck.png" alt="">
+                <div class="text">
+                    <h3 class="text-titular beneficio-title">Envío gratis</h3>
+                    <p class="red beneficio-p inter-bold">En todas las compras</p>
+                </div>
+            </div> 
+        </div>
+       
+        <div class="slick slick-benef">
+            <div class="separador"></div>
+            <div class="beneficio">
+                <img src="/img/motito.png" alt="">
+                <div class="text">
+                    <h3 class="text-titular beneficio-title">Te llega en 24hs</h3>
+                    <p class="light-gray beneficio-p inter-bold">Con costo adicional</p>
+                </div>
+            </div> 
+        </div>
+    </div>
+    
+
+    <button class="slick-arrow slick-next arrow-benef" id="button-next" data-button="button-next" onclick="app.processingButton(event)"><img src="/img/arr-r.png"  alt=""></button>
+    
+    </div>
+   
+    </section>
+<section class="juguete-del-dia">
+    <h2 class="orange inter-bold">Juguete del día</h2>
+    <div class="video">
+        <img class="miniatura" src="/img/miniatura.png" alt="">
+       <img class="play" src="/img/play.png" alt="">
+    </div>
+   
+
+<div class="promo">
+    <article class="product-horizontal">
+        <div class="discount"><img class="discount-10" src="/img/promo.png" alt=""></div>
+        <div class="product-card-horizontal">
+            <img src="/img/DESKTOP/dany.png" alt="">
+            <div class="text">
+                <h2 class="title text-titular">Funko</h2>
+                <p class="description">Funko POP | Game of Thrones - Daenerys</p>
+                <p class="cuotas">6 cuotas s/interés</p>
+                <h3 class="price">$211,50</h3>
+                <p class="final">Final: <del>$2.390</del> <strong>$1.269</strong></p>
+            </div>
+        </div>
+
+    </article>
+</div>
+</section>
+
+ <section class="buscado">
+    
+    <div class="item"> 
+        <h3 class="text-titular green">Lo más buscado</h3>
+    </div>
+    <%- include ('./partials/mochilas') %>
+
+   
+</section>
+
+<section class="novedades Carousel">
+    <h3 class="text-titular">Novedades</h3>
+    <p class="ver text-titular">VER TODO</p>
+    <div class="products-container">
+        <div class="slick-list list-novedades" id="slick-list">
+          
+            <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)"><img src="/img/arrow.png" alt=""></button>
+                
+          
+            <div class="slick-track" id="track">
+            <div class="slick slick-novedades">
+                <%- include ('./partials/oneProduct') %>
+            </div>
+            <div class="slick slick-novedades">
+                <%- include ('./partials/productMochila') %>
+            </div>
+            <div class="slick slick-novedades">
+                <%- include ('./partials/oneProduct') %>
+            </div>
+            <div class="slick slick-novedades">
+                <%- include ('./partials/productMochila') %>
+            </div>
+            <div class="slick slick-novedades">
+                <%- include ('./partials/oneProduct') %>
+            </div>
+            <div class="slick slick-novedades">
+                <%- include ('./partials/productMochila') %>
+            </div>
+            
+        </div>
+
+        <button class="slick-arrow slick-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)"><img src="/img/arr-r.png"  alt=""></button>
+        
+        </div>
+       
+    </div>
+    <div class="carrusel-novedades">
+    
+        <div class="page"> <p>1 de 12</p></div>
+</div>
+</section>
+
+<section class="campaña">
+<div class="banner">
+    <img class="jansport" src="/img/jansport(1).png" alt="">
+    <img class="jansport2"    src="/img/jansport.png" alt="">
+</div>
+<div class="container-carrusel-mochila">
+    <article class="product mochila">
+        <div class="product-card">
+            <img src="/img/DESKTOP/2.png" alt="">
+            <div class="text">
+                <h2 class="title text-titular">Jansport</h2>
+                <p class="description">Mochila Madalyn Floral</p>
+                <p class="cuotas">6 cuotas s/interés</p>
+                <h3 class="price">$211,50</h3>
+                <p class="final">Final: <strong>$1.269</strong></p>
+            </div>
+        </div>
+    </article>
+    <div class="carrusel-novedades">
+        <div class="control">
+            <div class="big-arrow"><img src="/img/arrow.png" alt=""></div>
+            <div class="big-arrow"><img src="/img/arr-r.png" alt=""></div>
+    </div>
+            <div class="page"> <p>1 de 12</p></div>
+    </div>
+</div>
+</section>
+
+<section class="termina-en buscado">
+    
+    <div class="item contador"> <h4 class="text-titular dark-gray">Termina en</h4> <h3 class="text-titular red">23:00:04</h3> <div class="hs"><p>HS</p> <p>min</p> <p>seg</p> </div> </div>
+    <%- include ('./partials/mochilas') %>
+</section>
+
+<section class="novedades recomendados">
+    <h3 class="text-titular">Te recomendamos</h3>
+    <p class="ver text-titular">VER TODO</p>
+    <div class="products-container">
+        <div class="slick-list list-novedades" id="slick-list">
+          
+            <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)"><img src="/img/arrow.png" alt=""></button>
+                
+          
+            <div class="slick-track" id="track">
+            <div class="slick slick-novedades">
+                <%- include ('./partials/oneProduct') %>
+            </div>
+            <div class="slick slick-novedades">
+                <%- include ('./partials/productMochila') %>
+            </div>
+            <div class="slick slick-novedades">
+                <%- include ('./partials/oneProduct') %>
+            </div>
+            <div class="slick slick-novedades">
+                <%- include ('./partials/productMochila') %>
+            </div>
+            <div class="slick slick-novedades">
+                <%- include ('./partials/oneProduct') %>
+            </div>
+            <div class="slick slick-novedades">
+                <%- include ('./partials/productMochila') %>
+            </div>
+            
+        </div>
+
+        <button class="slick-arrow slick-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)"><img src="/img/arr-r.png"  alt=""></button>
+        
+        </div>
+       
+    </div>
+    <div class="carrusel-novedades">
+    <div class="control">
+        <div class="big-arrow"><img src="/img/arrow.png" alt=""></div>
+        <div class="big-arrow"><img src="/img/arr-r.png" alt=""></div>
+</div>
+        <div class="page"> <p>1 de 12</p></div>
+</div>
+</section>
+
+</main>
+<div class="whatsapp">
+    <img src="/img/logo.png" alt="">
+</div>
+
+
+<footer>
+    
+    <section class="subir">
+        <button class="btn-subir" id="btn_subir">
+            <img src="/img/subir.png" alt="">
+        </button>
+       
+    </section>
+<section class="contacto">
+    <div class="contacto-ofertas">
+        <div class="text">
+            <h4 class="orange text-titular">Contacto</h4>
+        <h6 class="text-regular light-gray">MAYORISTAS</h6>
+        </div>
+        <form class="email">
+            <h6 class="text-titular">¿BUSCÁS OFERTAS?</h6>
+            <input type="text" placeholder="eMail"> 
+            <button class="button-byn">ENVIAR</button>
+        </form>
+    </div>
+
+    <div class="links">
+        <div class="redes">
+            <div class="left">
+                <div class="text">
+                    <p>INSTAGRAM</p> 
+            
+                <p>YOUTUBE</p> 
+            
+                <p>FACEBOOK</p> 
+                </div>
+                
+                <div class="icons">
+                    <img src="/img/insta.png" alt="">
+                    <img src="/img/youtube.png" alt="">
+                    <img src="/img/fb.png" alt="">
+                </div>
+                
+            </div>
+            <div class="right">
+                <p>PREGUNTAS FREC.</p>
+                <p>TÉRM & COND</p>
+                <p>MIS PEDIDOS</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="logos">
+        <div class="promo">
+            <img src="/img/cace.png" alt="">
+            <div class="separador"></div>
+            <img src="/img/ahora_18 1.png" alt="">
+            <div class="separador"></div>
+            <img src="/img/hotsale.png" alt="">
+
+        </div>
+        <div class="legal">
+            <img src="/img/afip.png" alt="">
+            <img src="/img/vtex.png" alt="">
+            <img src="/img/cruce.png" alt="">
+        </div>
+    </div>
+</section>
+</footer>
+<script src="/js/scroll.js"></script>
+<script src="/js/carrusel.js"></script>
+</body>
+</html>

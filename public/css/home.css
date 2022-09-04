@@ -1,0 +1,876 @@
+
+
+/* home */
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cabecera {
+    width: 90%;
+    height: 72px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.cart {
+    width:40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.cart p{
+    
+    margin-bottom: 5px;
+}
+
+.logo-cruce {
+    width: 106.36px;
+    height: 43.61px;
+}
+
+.top-banner {
+    width: 100%;
+    height: 30px;
+    background-color: #7D5A94;
+    box-sizing: border-box;
+    margin-top: -13px;
+}
+
+.top-banner p {
+    width: 150%;
+    font-family: 'Inter';
+    font-weight: 700;
+    color: white;
+    padding: 6px;
+    font-size: 13px;
+    letter-spacing: 0.01em;
+    line-height: 15px;
+}
+
+.top-banner i {
+    position: absolute;
+    top: 72px;
+    right: -1px;
+    background-color: #7D5A94;
+    color: white;
+    padding: 7px;
+    padding-right: 15px;
+}
+.search{
+   display: block;
+   margin: auto;
+    width: 285px;
+    height: 40px;
+}
+.buscador {
+    width: 284px;
+    height: 36px;
+    margin-top:12px;
+    border: solid 1px #C8C8C8;
+    border-radius: 3px;
+    padding-left: 36px;
+}
+
+.search button {
+    border: none;
+    background-color: transparent;
+    width: 15.84px;
+    height: 15.83px;
+    position: relative;
+    z-index: 10;
+    top:-26px;
+left: 7px
+}
+
+.buscador::placeholder {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #8C8C8C;
+}
+.titular {
+    display: block;
+    margin-left:12px;
+}
+.titular .subtitulo{
+    display: none;
+}
+
+.nuestras-marcas{
+    width: 100%;
+}
+/*-------POP UP----------*/
+.pop-up{
+    position: fixed;
+top: 430px;
+left: 15px;
+z-index: 10;
+}
+.pop-up i{
+    position: relative;
+top: -80px;
+left: -20px;
+border: 2px solid;
+border-radius: 50%;
+width: 25px;
+height: 25px;
+text-align: center;
+padding-top: 3px;
+background: white;
+cursor:pointer
+}
+
+.pop-up h4{
+    position: relative;
+    top: -90px;
+    font-size: 15px;
+    width: 150px;
+    left: 15px;
+}
+
+/* container-products */
+.products-container{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   
+}
+.row-right{
+    margin-top: 60px
+}
+
+
+
+.nuestras-marcas{
+    margin-top:20px;
+    display:flex;
+   align-items: center;
+   flex-direction: column;
+}
+
+.Carousel{
+    width: 90%;
+    margin: auto;
+}
+.slick-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 110px;
+    padding: 10px 0px;
+    
+    max-width: 90vw;
+    overflow: hidden;
+}
+.slick-track{
+    position: relative;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease-in-out;
+    height: 60px;
+}
+.slick{
+    width: 132px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.15);
+border-radius: 3px;
+margin-left: 15px;
+margin-right: 15px;
+float: left;
+box-sizing: border-box;
+height: 100%;
+}
+.slick img{
+ width: 90px;
+ height: 36px;
+ transition: .3s ease-in-out;
+}
+.slick img:hover{
+opacity: .70;
+}
+ 
+
+.slick-arrow{
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    background: #FFFFFF;
+border: 1px solid #F0F0F0;
+border-radius: 24px;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+z-index: 4;
+}
+.slick-arrow:focus{
+    outline: 0;
+}
+.slick-arrow img{
+    width: 9px;
+    height: 16px;
+
+}
+.slick-prev{
+left:0px;
+}
+ .slick-next{
+    right: 0px;
+}
+
+.slick-benef{
+    width: 200px;
+    box-shadow:none;
+    flex-direction: row;
+    margin: 0px;
+
+}
+.list-benef{
+    margin: auto;
+}
+.track-benef{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.arrow-benef{
+    width: 24.48px;
+    height: 24px;
+}
+.beneficio{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+
+
+.beneficios{
+   
+    height: 72px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+    width: 100%;
+    display: flex;
+    margin-top: 32px;
+    flex-direction: column;
+   justify-content: center;
+}
+.separador{
+   width: 36px; 
+   height: 0px;
+   margin: auto;
+border: 1px solid #C8C8C8;
+transform: rotate(-60deg);
+
+
+
+}
+.beneficio img{
+    width: auto;
+    height:20px;
+    object-fit: contain;
+}
+.beneficio .text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 14px;
+}
+.beneficio-title, .beneficio-p{
+    margin: 0;
+}
+.beneficio-title{
+    font-size: 16px;
+}
+.beneficio-p{
+    font-size: 13px;
+}
+ 
+
+/* juguete del día */
+
+
+.play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.juguete-del-dia h2{
+    display: block;
+    margin: auto;
+    font-size: 43px;
+    line-height: 42px;
+    letter-spacing: -0.01em;
+}
+.juguete-del-dia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.video{
+    position: relative;
+    margin: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 24px;
+}
+.miniatura {
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+.promo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    
+}
+
+
+/*lo + buscado */
+.buscado{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.item{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    align-items: center;
+
+}
+.item h3{
+    font-size: 27px;
+    margin-left: 12px;
+    margin-bottom: 20px;
+}
+.item img{
+    width: 72px;
+    height: 72px;
+}
+
+/* novedades */
+.novedades{
+    margin-left: 12px;
+    margin-right: 12px;
+}
+.novedades h3{
+    font-size: 27px;
+
+}
+.novedades .ver{
+    font-size: 10px;
+    margin-top: -10px;
+    margin-left: 5px;
+}
+.carrusel-novedades{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.novedades .control{
+    
+    display: flex;
+   
+}
+.list-novedades{
+    height: 460px;
+
+}
+.slick-novedades{
+    width: auto;
+    box-shadow: none;
+    border-radius: 0px;
+}
+.slick .discount img{
+    width: 48px;
+    height: 48px;
+}
+.big-arrow{
+    width: 48px;
+    margin-right: 24px;
+height: 48px;
+border: 1px solid #C8C8C8;
+border-radius: 24px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/* campaña  */
+.campaña{
+    margin-top: 20px;
+}
+.jansport {
+    width: 100%;
+}
+.jansport2{
+    width: 50%;
+    height: 50%;
+    position: relative;
+    top:-100px;
+    left:40%;
+}
+.campaña .product{
+    width: 240px;
+    background-color: white;
+    position: relative;
+    top:-130px;
+    margin-left: 12px;
+    padding: 5px;
+}
+.mochila .text{
+    
+    margin-left: 15px;
+    margin-top:12px;
+}
+.mochila .text .description{
+    font-size: 15px;
+}
+.mochila .text .cuotas{
+    font-size: 15px;
+}
+.mochila .text .price{
+    font-size: 22px;
+}
+.mochila .text strong{
+color: black;
+font-size: 16px;
+}
+.campaña .carrusel-novedades{
+    margin-top: -130px;
+  flex-direction: row-reverse; 
+  margin-left:12px;
+  
+}
+.campaña .carrusel-novedades .control{
+    display: flex;
+}
+
+/* termina en */
+.termina-en{
+    margin-top: 15px;
+}
+.termina-en .contador{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.contador .hs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 140px;
+}
+.contador .hs p{
+    font-family: 'Inter';
+    font-size: 15px;
+    color:#505050;
+}
+.contador h3{
+    margin-left: 0px;
+    margin-bottom: -15px;
+    margin-top:-18px;
+    
+}
+
+
+
+/* subir */
+.subir{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.subir img{
+    width: 120px;
+    height: 60px;
+    margin: auto;
+}
+
+
+
+/* FOOTER */
+/* contacto  */
+.contacto{
+    width: 100%;
+    margin: auto;
+}
+.contacto-ofertas{
+    display: flex;
+    flex-direction: row;
+    gap:35px; 
+    align-items: center;
+   justify-content: center;
+}
+.contacto-ofertas .text{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.contacto-ofertas .text h3{
+    font-size: 16px;
+    
+    letter-spacing: 0.05em;
+}
+.contacto-ofertas .text h6{
+    font-size: 10px;
+    margin-top: -8px;
+
+}
+.contacto-ofertas .email{
+    display: flex;
+    flex-direction: column;
+}
+.contacto-ofertas .email input{
+    padding-left: 12px;
+    font-size: 13px;
+    width: 130px;
+    height: 30px;
+    
+}
+.contacto-ofertas .email h6{
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+}
+.contacto-ofertas .email button{
+    margin-top: 6px;
+}
+
+.links .redes{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+}
+.redes .right{
+    display: flex;
+    flex-direction: column;
+    gap:10px
+}
+
+.redes .left{
+    display: flex;
+    flex-direction: row;
+  
+}
+.redes .left .text{
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    align-items: flex-end;
+}
+.left .icons{
+display: flex;
+flex-direction: column;
+gap:24px;
+margin-left: 10px;
+margin-right: 25px;
+}
+.redes img{
+    align-self: center;
+    margin-left: 10px;
+}
+.redes p{
+    font-family:NeueMachina-bold;
+    font-size:10px;
+    color: #8C8C8C
+}
+
+/* logos footer */
+.logos{
+    display: flex;
+    flex-direction: column;
+    margin-top:40px;
+    align-items: center;
+  
+}
+.logos .promo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 218px;
+    margin: auto;
+}
+.logos .promo .separador{
+    width: 24px;
+height: 0px;
+
+/* g2 */
+border: 2px solid #F0F0F0;
+transform: rotate(90deg);
+
+}
+.logos .legal{
+    display: flex;
+    flex-direction:row ;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+
+
+@media screen and (min-width:700px) {
+    .novedades{
+        margin: auto;
+    }
+    .titular{
+        width: 80%;
+        margin: auto;
+    }
+    .titular .subtitulo{
+        display: block;
+        font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 24px;
+    }
+    .buscado{
+        width: 60%;
+    }
+    .product{
+        width: 200px;
+    }
+    
+    .product .text{
+        width: 150px;
+    }
+    .product-card img, .product-card-horizontal img{
+        height: 230px;
+    }
+    .jansport2{
+        top:-200px;
+          
+    }
+footer .contacto{
+    display: flex;
+flex-direction: row;
+gap:25px;
+width: 90%;
+margin: auto;
+flex-wrap: wrap;
+justify-content: center;
+}
+}
+
+
+@media screen and (min-width: 1000px) {
+    .novedades .products-container{
+        width: 100%;
+        justify-content: space-around;
+       
+    }
+    .mobile{
+        display: none;
+    }
+    
+    .product{
+        width: 200px;
+        padding: 10px;
+        
+    }
+    .products-list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        margin-left:24px;
+        margin-right: 24px;
+        overflow: hidden;
+    }
+    .products-list .titular{
+        width: 40%;
+        order:1;
+        margin-left: auto;
+       margin-right: inherit;
+    }
+    .titular h1{
+        font-size: 56px;
+        line-height: 54px;
+letter-spacing: -0.03em;
+    }
+    .titular .subtitulo{
+        font-size: 22px;
+line-height: 24px;
+    }
+    .products-container{
+        width: 55%;
+        
+    }
+.desktop .products-container{
+    justify-content: inherit;
+    margin-top: 90px;
+margin-left: -35px;
+}
+
+    .beneficios {
+        order: -1;
+    }
+    .beneficios .mobile{
+        display: none;
+    }
+    .beneficios {
+        width: 775px;
+    }
+    .product .discount{
+        top:170px;
+        left:28px
+    }
+    .mobile{
+        display: none;
+    }
+
+    .juguete-del-dia{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .juguete-del-dia .orange{
+        width: 100%;
+        font-size: 108px;
+line-height: 96px;
+letter-spacing: -0.01em;
+padding-left: 5%;
+    }
+    .juguete-del-dia .video{
+        width: 70%;
+        order:1
+    }
+    .promo{
+        width: 27%;
+        flex-direction: column;
+    }
+    .campaña{
+        display: flex;
+       max-height: 588px;
+        
+    }
+    .campaña .banner{
+        width: 70%;
+        max-width: 1100px;
+    }
+    .campaña .product{
+        position: inherit;
+        padding: 0;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .container-carrusel-mochila{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+    }
+    .jansport2{
+        top:-14rem;
+        width: 50%;
+        left: 47%;
+        height: 60%;
+    }
+    footer .contacto{
+        width: 60%;
+        justify-content: space-around;
+    }
+    
+     .contacto-ofertas{
+        order:1
+    }
+    .contacto-ofertas .text{
+        display: none;
+    }
+     .contacto .links{
+        width: 50%;
+    }
+    .contacto .redes{
+justify-content: space-between;
+    }
+    .contacto .redes .text{
+        order:1;
+        align-items: flex-start;
+    }
+    .contacto .logos{
+        display: none;
+    }
+}
+@media screen and (min-width: 1260px) {
+
+.jansport2{
+    top: -18rem;
+    width: 43%;
+}
+}
+
+@media screen and (min-width: 1360px) {
+    .product{
+        width: 250px;
+        margin: 0 30px;
+    }
+    .jansport2{
+        top:-18rem;
+    }
+.campaña{
+max-height: 700px;
+}
+.container-carrusel-mochila{
+    max-height: 620px;
+    
+}
+.jansport2{
+ width: 45%;  
+left: 48%;
+height: 60%;
+}
+
+}
+@media screen and (min-width: 1260px) {
+    .jansport2{
+width: 42%;
+
+    }
+}

@@ -1,0 +1,25 @@
+<% const funkos = products.filter((p) => p.category.id == 1); 
+ funkos.sort(()=> Math.random() - 0.5).splice(1,2).forEach(product => { %>
+    
+        <article class="product">
+            <% if (product.discount===1) { %>
+            <div class="discount"><img class="discount-10" src="/img/promo.png" alt=""></div>
+            <% } %>
+            <div class="product-card">
+            <img src="/img/DESKTOP/<%= product.img %> " alt="">
+            <div class="text">
+                <h2 class="title text-titular"><%= product.category.category %> </h2>
+                <p class="description"><%= product.title %> </p>
+                <p class="cuotas">6 cuotas s/interés</p>
+                <h3 class="price">$211,50</h3>
+                <p class="final">Final: <del>$<%= product.price %> </del> <strong>$<%= product.final %> </strong></p>
+                
+            </div>
+            </div>
+            <img class="button-cart" src="/img/green-cart.svg" alt="">
+            
+            </article>
+            
+   
+    
+<% }) %>

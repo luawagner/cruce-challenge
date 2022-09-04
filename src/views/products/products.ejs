@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('../partials/head', {style: 'products.css', title: 'Products'}) %>
+
+<body>
+    <section class="cabecera-products">
+        <h3 class="light-gray"><a class="inter-regular" href="/">Inicio /</a> <a class="inter-regular" href="/products">Juguetes / </a> 
+          
+           <% categories.forEach(category => { %>
+            <% if (cat == category.id) { %>
+                <strong class="black text-regular"><%= category.category %> </strong>
+               <% } %>
+                <% }) %>
+              
+        </h3>
+        <div class="filtrar">
+            
+              
+                <button class="filter-button"> <div class="left"><img src="/img/filter.svg" alt=""> <p class="text-titular">Filtrar</p></div> <img class="right" src="/img/flechita.svg" alt=""></button>
+            <div class="links-filter">
+                <ul class="categorias">
+                    <% categories.forEach(category => { %>
+                      <li><a class="text-regular .black" href="/products/<%= category.id %> "><%= category.category %> </a></li>
+                      <% }) %>
+                    <li><a class="text-regular .black" href="/products">Ver todos</a></li>
+                  </ul>
+            </div>
+        </div>
+       
+            <select class="ordenar" name="ordenar" id="ordenar" onchange="cambiar()">
+<!--                 <option value="" selected hidden>Ordenar por</option>
+ -->                <option value="menor" selected>Menor precio</option>
+                <option value="mayor">Mayor precio</option>
+            </select>
+        
+    </section>
+    <div class="banner">
+        <img src="/img/banner_listado.png" alt="">
+    </div>
+    <main>
+       
+        
+            <div class="products-list mayor hidden">
+                
+                    <% products.forEach(product => { %>
+                     <% if (product.discount===1) { %>
+                        <article class="product-horizontal">
+                        <div class="discount"><img class="discount-10" src="/img/promo.png" alt=""></div>
+                 
+                            <div class="product-card-horizontal">
+                                <img src="/img/DESKTOP/<%= product.img %> " alt="">
+                                <div class="text">
+                                    <h2 class="title text-titular"><%= product.category.category %> </h2>
+                                    <p class="description"><%= product.title %> </p>
+                                    <p class="cuotas">6 cuotas s/interés</p>
+                                    <h3 class="price">$211,50</h3>
+                                    <p class="final">Final: <del>$<%= product.price %> </del> <strong>$<%= product.final %> </strong></p>
+                                    
+                                
+                                </div>
+                            </div>
+                            <img class="button-cart" src="/img/green-cart.svg" alt="">
+                        </article>
+                     <% } else { %>
+                         <article class="product-horizontal">
+                 
+                 <div class="product-card-horizontal">
+                     <img src="/img/DESKTOP/<%= product.img %> " alt="">
+                     <div class="text">
+                         <h2 class="title text-titular"><%= product.category.category %> </h2>
+                         <p class="description"><%= product.title %> </p>
+                         <p class="cuotas">6 cuotas s/interés</p>
+                         <h3 class="price">$211,50</h3>
+                         <p class="final">Final: <del>$<%= product.price %> </del> <strong>$<%= product.final %> </strong></p>
+                         
+                     
+                     </div>
+                 </div>
+                 <img class="button-cart" src="/img/green-cart.svg" alt="">
+             </article>
+             <%   } %>
+                    <% }) %>
+                   
+                    
+                   
+               
+            
+            </div>
+            <div class="products-list menor">
+                
+                <% products.reverse().forEach(product => { %>
+                 <% if (product.discount===1) { %>
+                    <article class="product-horizontal">
+                    <div class="discount"><img class="discount-10" src="/img/promo.png" alt=""></div>
+             
+                        <div class="product-card-horizontal">
+                            <img src="/img/DESKTOP/<%= product.img %> " alt="">
+                            <div class="text">
+                                <h2 class="title text-titular"><%= product.category.category %> </h2>
+                                <p class="description"><%= product.title %> </p>
+                                <p class="cuotas">6 cuotas s/interés</p>
+                                <h3 class="price">$211,50</h3>
+                                <p class="final">Final: <del>$<%= product.price %> </del> <strong>$<%= product.final %> </strong></p>
+                                
+                            
+                            </div>
+                        </div>
+                        <img class="button-cart" src="/img/green-cart.svg" alt="">
+                    </article>
+                 <% } else { %>
+                     <article class="product-horizontal">
+             
+             <div class="product-card-horizontal">
+                 <img src="/img/DESKTOP/<%= product.img %> " alt="">
+                 <div class="text">
+                     <h2 class="title text-titular"><%= product.category.category %> </h2>
+                     <p class="description"><%= product.title %> </p>
+                     <p class="cuotas">6 cuotas s/interés</p>
+                     <h3 class="price">$211,50</h3>
+                     <p class="final">Final: <del>$<%= product.price %> </del> <strong>$<%= product.final %> </strong></p>
+                     
+                 
+                 </div>
+             </div>
+             <img class="button-cart" src="/img/green-cart.svg" alt="">
+         </article>
+         <%   } %>
+                <% }) %>
+               
+                
+               
+           
+        
+        </div>
+
+        <section class="paginacion">
+            <div class="control">
+                <div class="flechas">
+                    <img src="/img/flecha.svg" alt="">
+                    <img src="/img/flecha2.svg" alt="">
+                </div>
+                <div class="num">
+                    <p class="inactive text-regular">1</p>
+                    <p class="active">2</p>
+                    <p class="inactive text-regular">3</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="/js/order.js"></script> 
+</body>
+</html>
